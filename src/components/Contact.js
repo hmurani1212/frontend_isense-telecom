@@ -43,7 +43,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('https://backendisense-telecom-production-d325.up.railway.app/api/send_email', {
+      const response = await fetch('https://backend-isense-telecom.vercel.app/api/send_email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
