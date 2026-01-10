@@ -6,30 +6,42 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed w-full z-50 bg-white bg-opacity-10 backdrop-blur-sm border-b border-white border-opacity-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-50 border-b border-white/10 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 shadow-soft">
+      <div className="container-page">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/YBgjGrWaMqF0kNZW/fulllogo_transparent-AQEeBylZ1DHDe8QB.png" 
                 alt="I-SENSE TELECOM" 
-                className="h-28 w-auto object-contain md:h-32"
+                className="h-20 w-auto object-contain md:h-24"
               />
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className={`${location.pathname === '/' ? 'text-blue-500' : 'text-red-500'} hover:text-blue-400 font-medium transition duration-300`}>
+            <Link
+              to="/"
+              className={`link-nav rounded-full px-4 py-2 ${location.pathname === '/' ? 'bg-white/10 text-white' : 'text-white/75 hover:text-white hover:bg-white/5'}`}
+            >
               Home
             </Link>
-            <Link to="/services" className={`${location.pathname === '/services' ? 'text-blue-500' : 'text-red-500'} hover:text-blue-400 font-medium transition duration-300`}>
+            <Link
+              to="/services"
+              className={`link-nav rounded-full px-4 py-2 ${location.pathname === '/services' ? 'bg-white/10 text-white' : 'text-white/75 hover:text-white hover:bg-white/5'}`}
+            >
               Services
             </Link>
-            <Link to="/pricing" className={`${location.pathname === '/pricing' ? 'text-blue-500' : 'text-red-500'} hover:text-blue-400 font-medium transition duration-300`}>
+            <Link
+              to="/pricing"
+              className={`link-nav rounded-full px-4 py-2 ${location.pathname === '/pricing' ? 'bg-white/10 text-white' : 'text-white/75 hover:text-white hover:bg-white/5'}`}
+            >
               Pricing
             </Link>
-            <Link to="/contact" className={`${location.pathname === '/contact' ? 'text-blue-500' : 'text-red-500'} hover:text-blue-400 font-medium transition duration-300`}>
+            <Link
+              to="/contact"
+              className={`link-nav rounded-full px-4 py-2 ${location.pathname === '/contact' ? 'bg-white/10 text-white' : 'text-white/75 hover:text-white hover:bg-white/5'}`}
+            >
               Contact
             </Link>
           </div>
@@ -39,7 +51,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/usama-butt-isense-telecom/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-400 transition"
+              className="text-white/70 hover:text-white transition"
               aria-label="Visit our LinkedIn profile"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +62,7 @@ const Navbar = () => {
               href="https://teams.live.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Finvite%2FFEA_vU2NvlnIPTUnBM%3Fv%3Dg1&type=invite&deeplinkId=ac972766-2121-4a37-bfa8-fcc319047b38&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-400 transition"
+              className="text-white/70 hover:text-white transition"
               aria-label="Join us on Microsoft Teams"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 2228.833 2073.333">
@@ -79,7 +91,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-blue-400 focus:outline-none"
+              className="text-white/90 hover:text-white focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -94,18 +106,18 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-black bg-opacity-90 backdrop-blur-sm">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/" className={`block px-3 py-2 ${location.pathname === '/' ? 'text-blue-400' : 'text-red-400'} hover:bg-white hover:bg-opacity-10 rounded-md`} onClick={() => setIsOpen(false)}>
+        <div className="md:hidden bg-slate-950 border-t border-white/10">
+          <div className="container-page py-4 space-y-1">
+            <Link to="/" className={`block rounded-lg px-3 py-2 ${location.pathname === '/' ? 'text-white bg-white/10' : 'text-white/80 hover:bg-white/10'} `} onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link to="/services" className={`block px-3 py-2 ${location.pathname === '/services' ? 'text-blue-400' : 'text-red-400'} hover:bg-white hover:bg-opacity-10 rounded-md`} onClick={() => setIsOpen(false)}>
+            <Link to="/services" className={`block rounded-lg px-3 py-2 ${location.pathname === '/services' ? 'text-white bg-white/10' : 'text-white/80 hover:bg-white/10'} `} onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <Link to="/pricing" className={`block px-3 py-2 ${location.pathname === '/pricing' ? 'text-blue-400' : 'text-red-400'} hover:bg-white hover:bg-opacity-10 rounded-md`} onClick={() => setIsOpen(false)}>
+            <Link to="/pricing" className={`block rounded-lg px-3 py-2 ${location.pathname === '/pricing' ? 'text-white bg-white/10' : 'text-white/80 hover:bg-white/10'} `} onClick={() => setIsOpen(false)}>
               Pricing
             </Link>
-            <Link to="/contact" className={`block px-3 py-2 ${location.pathname === '/contact' ? 'text-blue-400' : 'text-red-400'} hover:bg-white hover:bg-opacity-10 rounded-md`} onClick={() => setIsOpen(false)}>
+            <Link to="/contact" className={`block rounded-lg px-3 py-2 ${location.pathname === '/contact' ? 'text-white bg-white/10' : 'text-white/80 hover:bg-white/10'} `} onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </div>
