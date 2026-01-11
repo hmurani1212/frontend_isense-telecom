@@ -98,13 +98,13 @@ const Pricing = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-8 text-center">
-                <h3 className="text-3xl font-bold text-accent-400 mb-4">CC</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">CC</h3>
                 <p className="text-white/85 leading-relaxed mb-6">
                   The CC trunk has a good call quality. This trunk is best suited for call centers, taking into account the specifics of incoming traffic.
                 </p>
                 <a
                   href="mailto:support@i-sensetelecom.com"
-                  className="btn-accent"
+                  className="btn-ghost"
                 >
                   Details
                 </a>
@@ -118,13 +118,13 @@ const Pricing = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-8 text-center">
-                <h3 className="text-3xl font-bold text-accent-400 mb-4">Retail</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Retail</h3>
                 <p className="text-white/85 leading-relaxed mb-6">
-                  Retail trunk can be used for clean local business traffic. You will get high quality routes with the best rates in the market.
+                  Retail trunk can be used for clean local business traffic nationwide. You will get high quality routes with the best rates in the market.
                 </p>
                 <a
                   href="mailto:support@i-sensetelecom.com"
-                  className="btn-accent"
+                  className="btn-ghost"
                 >
                   Details
                 </a>
@@ -138,13 +138,13 @@ const Pricing = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-8 text-center">
-                <h3 className="text-3xl font-bold text-accent-400 mb-4">Low cost</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Low cost</h3>
                 <p className="text-white/85 leading-relaxed mb-6">
                   Low cost trunk is our special offer. This trunk provides connection to the networks of the largest telecom operators with good callback at the best possible rate.
                 </p>
                 <a
                   href="mailto:support@i-sensetelecom.com"
-                  className="btn-accent"
+                  className="btn-ghost"
                 >
                   Details
                 </a>

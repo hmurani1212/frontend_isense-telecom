@@ -72,7 +72,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="btn-primary text-center"
+                className="btn-ghost text-center"
               >
                 Get Started
               </Link>
@@ -101,21 +101,28 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6">
-            <div className="card-glass">
-              <h3 className="text-2xl font-bold text-accent-400 mb-3">VoIP</h3>
-              <p className="text-white/90">Affordable per-second billing.</p>
-              <p className="text-white/90">Global calling made easy.</p>
-              <p className="text-white/90">Reliable SIP trunk services.</p>
+            <div className="card-glass hover:scale-105 transition-transform duration-300">
+              <h3 className="text-2xl font-bold text-white mb-2">VoIP</h3>
+              <p className="text-white/70 text-sm mb-3">International voice termination at competitive rates</p>
+              <p className="text-white/90 leading-relaxed">
+                Affordable per-second billing with global calling made easy. Get reliable SIP trunk services with premium quality routes and 24/7 support for your business needs.
+              </p>
             </div>
 
-            <div className="card-glass">
-              <h3 className="text-2xl font-bold text-accent-400 mb-3">SIP Trunks</h3>
-              <p className="text-white/90">Stable, scalable SIP trunking for your business.</p>
+            <div className="card-glass hover:scale-105 transition-transform duration-300">
+              <h3 className="text-2xl font-bold text-white mb-2">SIP Trunks</h3>
+              <p className="text-white/70 text-sm mb-3">Enterprise-grade connectivity solutions</p>
+              <p className="text-white/90 leading-relaxed">
+                Stable, scalable SIP trunking for your business operations with A-Z termination and CLI/Non-CLI options. Maximize efficiency with our flexible routing.
+              </p>
             </div>
 
-            <div className="card-glass">
-              <h3 className="text-2xl font-bold text-accent-400 mb-3">Callback</h3>
-              <p className="text-white/90">Optimized routing for high-answer traffic.</p>
+            <div className="card-glass hover:scale-105 transition-transform duration-300">
+              <h3 className="text-2xl font-bold text-white mb-2">Callback</h3>
+              <p className="text-white/70 text-sm mb-3">Smart routing technology</p>
+              <p className="text-white/90 leading-relaxed">
+                Optimized routing for high-answer traffic with intelligent callback systems and best rates. Perfect for call centers and high-volume operations worldwide.
+              </p>
             </div>
           </div>
         </div>

@@ -62,25 +62,23 @@ const Subscribe = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container-page">
+    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-brand-950">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDE0YzYuNjI3IDAgMTIgNS4zNzMgMTIgMTJzLTUuMzczIDEyLTEyIDEyLTEyLTUuMzczLTEyLTEyIDUuMzczLTEyIDEyLTEyem0wIDJ2MmMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHYtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+      
+      <div className="relative z-10 container-page">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="mb-6 flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-slate-700">
-              <span className="h-2 w-2 rounded-full bg-brand-600"></span>
-              Newsletter
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Subscribe Now</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Join i-sense telecom for seamless calling.
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Subscribe Now
+          </h2>
+          <p className="text-lg text-white/70 mb-8">
+            Join I-SENSE TELECOM for seamless calling.
           </p>
 
           {status.message && (
-            <div className={`mb-6 p-4 rounded-lg ${
+            <div className={`mb-6 p-4 rounded-xl border ${
               status.type === 'success' 
-                ? 'bg-green-100 text-green-700 border border-green-300' 
-                : 'bg-red-100 text-red-700 border border-red-300'
+                ? 'bg-green-500/10 text-green-300 border-green-500/30' 
+                : 'bg-red-500/10 text-red-300 border-red-500/30'
             }`}>
               {status.message}
             </div>
@@ -88,7 +86,7 @@ const Subscribe = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-left text-gray-700 font-medium mb-2">
+              <label className="block text-left text-white font-medium mb-2">
                 Email Address
               </label>
               <input
@@ -96,7 +94,7 @@ const Subscribe = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition text-gray-700"
+                className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/40 focus:bg-white/10 focus:border-accent-500/50 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all"
                 disabled={loading}
                 required
               />
@@ -105,7 +103,7 @@ const Subscribe = () => {
             <button
               type="submit"
               disabled={loading}
-              className="btn-primary px-12 py-4 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center mx-auto"
+              className="btn-ghost px-12 py-4 disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center justify-center mx-auto"
             >
               {loading ? (
                 <>

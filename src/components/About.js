@@ -36,7 +36,7 @@ const About = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/contact" className="btn-primary text-center">Talk to Sales</a>
+              <a href="/contact" className="btn-ghost text-center">Talk to Sales</a>
               <a href="/services" className="btn-ghost text-center">What we offer</a>
             </div>
           </div>
@@ -44,14 +44,14 @@ const About = () => {
           <div className="order-1 lg:order-2">
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden shadow-glow">
-                <img src="/center-image.jpg" alt="Network Equipment" className="h-48 w-full object-cover md:h-64" />
+                <img src="/center-image.jpg" alt="Network Equipment" className="h-48 w-full object-cover md:h-64 hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="grid gap-4">
                 <div className="rounded-2xl overflow-hidden shadow-soft">
-                  <img src="/left-image.jpg" alt="Phone" className="h-24 w-full object-cover md:h-32" />
+                  <img src="/left-image.jpg" alt="Phone" className="h-24 w-full object-cover md:h-32 hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-soft">
-                  <img src="/right-image.jpg" alt="Network Diagram" className="h-24 w-full object-cover md:h-32" />
+                  <img src="/right-image.jpg" alt="Network Diagram" className="h-24 w-full object-cover md:h-32 hover:scale-105 transition-transform duration-300" />
                 </div>
               </div>
             </div>

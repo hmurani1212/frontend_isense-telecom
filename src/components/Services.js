@@ -36,15 +36,7 @@ const Services = () => {
   };
 
   const highlightBrand = (text) => {
-    return text.split('I-SENSE TELECOM').map((part, index, array) => {
-      if (index === array.length - 1) return part;
-      return (
-        <React.Fragment key={index}>
-          {part}
-          <span className="text-accent-600 font-semibold">I-SENSE TELECOM</span>
-        </React.Fragment>
-      );
-    });
+    return text;
   };
 
   return (
@@ -65,12 +57,6 @@ const Services = () => {
 
         <div className="relative z-10 container-page">
           <div className="text-center mb-16">
-            <div className="mb-6 flex justify-center">
-              <span className="section-kicker">
-                <span className="h-2 w-2 rounded-full bg-accent-500"></span>
-                Services
-              </span>
-            </div>
             <h2 className="section-title text-white mb-6">Services</h2>
             <p className="text-lg text-white/85 leading-relaxed max-w-3xl mx-auto">
               Working with us, you obtain a full range of services for successful work with your clients. We follow trends and continually improve our product so you can get the maximum benefit of our services.
@@ -85,7 +71,7 @@ const Services = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 text-left">
-                <h3 className="text-2xl font-bold text-accent-400 mb-4">Retail Voice</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Retail Voice</h3>
                 <p className="text-white/85 leading-relaxed">
                   <span className="text-white font-semibold">I-SENSE TELECOM</span> Providing Premium international voice communication service for retailers at the carrier level.
                 </p>
@@ -99,7 +85,7 @@ const Services = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 text-left">
-                <h3 className="text-2xl font-bold text-accent-400 mb-4">Wholesale Voice</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Wholesale Voice</h3>
                 <p className="text-white/85 leading-relaxed">
                   <span className="text-white font-semibold">I-SENSE TELECOM</span> specializes in providing high-quality telecommunications services. International wholesale voicetermination services.Exceptional voice quality and maximum coverage.We offer the following qualities: CLI, Non-CLI, Premium TDM.
                 </p>
@@ -115,7 +101,7 @@ const Services = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-accent-400 mb-4">Call center</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Call center</h3>
                 <p className="text-white/85 leading-relaxed">
                   <span className="text-white font-semibold">I-SENSE TELECOM</span> We are open to cooperation and actively work with call centers and telephone offices, supplying them with high-quality termination.
                 </p>
@@ -131,12 +117,8 @@ const Services = () => {
         <div className="relative z-10 container-page">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white/90 mb-6">
-                <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse"></span>
-                Help Center
-              </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Frequently Asked <span className="text-accent-500">Questions</span>
+                Frequently Asked Questions
               </h2>
               <p className="text-white/70 text-lg max-w-2xl mx-auto">
                 Quick answers about VoIP services, call quality, and business solutions
@@ -221,7 +203,7 @@ const Services = () => {
                 Our support team is available 24/7 to help you with route selection, quality testing, and technical setup.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="btn-primary">
+                <a href="/contact" className="btn-ghost">
                   Contact Sales
                 </a>
                 <a href="mailto:support@i-sensetelecom.com" className="btn-ghost">

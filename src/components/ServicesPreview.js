@@ -49,15 +49,15 @@ const ServicesPreview = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="card-glass">
-            <h3 className="text-2xl font-bold text-accent-400 mb-4">SIP Trunks</h3>
+          <div className="card-glass hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-bold text-white mb-4">SIP Trunks</h3>
             <p className="text-white/90 leading-relaxed">
               I-SENSE TELECOM providing A-Z voice termination at standard and Premium quality. We terminate wholesale traffic, retail traffic, business traffic, call center traffic, IVR traffic.
             </p>
           </div>
 
-          <div className="card-glass">
-            <h3 className="text-2xl font-bold text-accent-400 mb-4">VoIP</h3>
+          <div className="card-glass hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-bold text-white mb-4">VoIP</h3>
             <p className="text-white/90 leading-relaxed">
               I-SENSE TELECOM specializes in providing high-quality telecommunications services. We will quickly install the necessary software, as accurately as possible integrating it into the individual characteristics of your business. Why choose us among wholesale VoIP providers Competition in the modern market has always existed and will continue to exist.
             </p>

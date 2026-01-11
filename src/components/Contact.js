@@ -95,12 +95,6 @@ const Contact = () => {
         <div className="relative z-10 container-page w-full">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="mb-6 flex justify-center">
-                <span className="section-kicker">
-                  <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse"></span>
-                  Get In Touch
-                </span>
-              </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Let's talk.</h1>
               <p className="text-xl text-white/85 max-w-2xl mx-auto">
                 Get in touch with <span className="font-semibold text-white">I-SENSE TELECOM</span> today for premium voice solutions.
@@ -249,7 +243,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full btn-primary py-3 disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full btn-ghost py-3 disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {loading ? (
                       <>
@@ -274,20 +268,20 @@ const Contact = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="card-glass p-6 text-center">
-                <div className="text-3xl font-bold text-accent-400 mb-2">15+</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">15+</div>
                 <div className="text-white/70 text-sm">Years Experience</div>
               </div>
-              <div className="card-glass p-6 text-center">
-                <div className="text-3xl font-bold text-accent-400 mb-2">24/7</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
                 <div className="text-white/70 text-sm">Support Available</div>
               </div>
-              <div className="card-glass p-6 text-center">
-                <div className="text-3xl font-bold text-accent-400 mb-2">A–Z</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">A–Z</div>
                 <div className="text-white/70 text-sm">Global Coverage</div>
               </div>
-              <div className="card-glass p-6 text-center">
-                <div className="text-3xl font-bold text-accent-400 mb-2">6+</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">6+</div>
                 <div className="text-white/70 text-sm">Countries Served</div>
               </div>
             </div>
