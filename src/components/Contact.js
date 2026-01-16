@@ -43,30 +43,64 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('https://backend-isense-telecom.vercel.app/api/send_email', {
+      const response = await fetch('https://builder-backend.hostinger.com/u1/data/v3/post/mjE4wv1q09UkVvrDZNxKmxGBXnGYBVr8', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: formData.email,
-          subject: `Contact Form - ${formData.name || 'New Message'}`,
-          message: formData.message
+          elementId: "ai--wVOx6",
+          formData: {
+            Email: {
+              value: formData.email,
+              type: "email"
+            },
+            Message: {
+              value: formData.message,
+              type: "text"
+            }
+          }
         }),
       });
 
-      const data = await response.json();
-
-      if (response.ok && data.STATUS === 'SUCCESSFUL') {
-        setStatus({ 
-          type: 'success', 
-          message: 'Your message has been sent successfully! We will get back to you soon.' 
-        });
-        setFormData({ name: '', email: '', message: '' });
+      // Check response status first
+      if (response.ok || response.status === 200 || response.status === 201) {
+        // Try to parse JSON, but don't fail if it's not JSON
+        try {
+          const responseData = await response.json();
+          // Check if response has an error in the data
+          if (responseData?.error || responseData?.STATUS === 'ERROR') {
+            setStatus({ 
+              type: 'error', 
+              message: responseData?.message || responseData?.MESSAGE || 'Failed to send message. Please try again.'
+            });
+          } else {
+            setStatus({ 
+              type: 'success', 
+              message: 'Your message has been sent successfully! We will get back to you soon.' 
+            });
+            setFormData({ name: '', email: '', message: '' });
+          }
+        } catch (jsonError) {
+          // If JSON parsing fails but status is 200, consider it success
+          setStatus({ 
+            type: 'success', 
+            message: 'Your message has been sent successfully! We will get back to you soon.' 
+          });
+          setFormData({ name: '', email: '', message: '' });
+        }
       } else {
+        // Response status is not ok
+        let errorMessage = 'Failed to send message. Please try again.';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData?.message || errorData?.MESSAGE || errorMessage;
+        } catch (e) {
+          // If we can't parse error response, use default message
+        }
         setStatus({ 
           type: 'error', 
-          message: data.MESSAGE || 'Failed to send message. Please try again.' 
+          message: errorMessage
         });
       }
     } catch (error) {
